@@ -10,6 +10,6 @@ function e() {
     try {
         showOutput(eval(document.getElementById("output").value))
     } catch (e) {
-        showOutput('Error')
+        showOutput('Error!')
     }
 }
