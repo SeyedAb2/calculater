@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=vv, initial-scale=1.0">
+    <title>ChangeBackgroundColor</title>
+    <style>
+        body {
+            background-color: tan;
+        }
+        
+        .box {
+            background-color: #3d4543 !important;
+            height: 300px;
+            width: 250px;
+            border-radius: 10px;
+            position: relative;
+            top: 80px;
+            left: 40%;
+        }
+        
+        .display {
+            background-color: #222 !important;
+            width: 220px;
+            position: relative;
+            left: 15px;
+            top: 20px;
+            height: 40px;
+        }
+        
+        .display input {
+            width: 95.5%;
+            position: relative;
+            left: 0px;
+            top: 2px;
+            right: 0px;
+            height: 29px;
+            color: black !important;
+            background-color: #bccd95 !important;
+            font-size: 21px;
+            text-align: right;
+        }
+        
+        .keys {
+            position: relative;
+            top: 15px;
+        }
+        
+        .button {
+            width: 40px;
+            height: 30px;
+            border: none;
+            border-radius: 8px;
+            margin-left: 17px;
+            cursor: pointer;
+            border-top: 2px solid transparent;
+        }
+        
+        .button.gray {
+            color: white;
+            background-color: #6f6f6f;
+            border-bottom: black 2px solid !important;
+            border-top: 2px #6f6f6f solid !important;
+        }
+        
+        .button.pink {
+            color: black;
+            background-color: #ff4561 !important;
+            border-bottom: black 2px solid !important;
+        }
+        
+        .button.black {
+            color: white;
+            background-color: #303030;
+            border-bottom: black 2px solid !important;
+            border-top: 2px 303030 solid !important;
+        }
+        
+        .button.orange {
+            color: black;
+            background-color: #FF9933;
+            border-bottom: black 2px solid !important;
+            border-top: 2px FF9933 solid !important;
+        }
+        
+        .gray:active {
+            border-top: black 2px solid !important;
+            border-bottom: 2px #6f6f6f solid !important;
+        }
+        
+        .pink:active {
+            border-top: black 2px solid !important;
+            border-bottom: #ff4561 2px solid !important;
+        }
+        
+        .black:active {
+            border-top: black 2px solid !important;
+            border-bottom: #303030 2px solid !important;
+        }
+        
+        .orange:active {
+            border-top: black 2px solid !important;
+            border-bottom: FF9933 2px solid !important;
+        }
+        
+        p {
+            line-height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="display"><input type="text" readonly size="18" id="output"></div>
+        <div class="keys">
+            <p><input type="button" class="button gray" value="mrc" onclick='showOutput("just show mrc")'><input type="button" class="button gray" value="m-" onclick='showOutput("just show m-")'><input type="button" class="button gray" value="m+" onclick='showOutput("just show m+")'>
+                <input type="button" class="button pink" value="/" onclick='operation("/")'></p>
+            <p><input type="button" class="button black" value="7" onclick='operation("7")'><input type="button" class="button black" value="8" onclick='operation("8")'><input type="button" class="button black" value="9" onclick='operation("9")'><input type="button"
+                    class="button pink" value="*" onclick='operation("*")'></p>
+            <p><input type="button" class="button black" value="4" onclick='operation("4")'><input type="button" class="button black" value="5" onclick='operation("5")'><input type="button" class="button black" value="6" onclick='operation("6")'><input type="button"
+                    class="button pink" value="-" onclick='operation("-")'></p>
+            <p><input type="button" class="button black" value="1" onclick='operation("1")'><input type="button" class="button black" value="2" onclick='operation("2")'><input type="button" class="button black" value="3" onclick='operation("3")'><input type="button"
+                    class="button pink" value="+" onclick='operation("+")'></p>
+            <p><input type="button" class="button black" value="0" onclick='operation("0")'><input type="button" class="button black" value="." onclick='operation(".")'><input type="button" class="button black" value="C" onclick='showOutput("")'><input type="button"
+                    class="button orange" value="=" onclick='e()'></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
